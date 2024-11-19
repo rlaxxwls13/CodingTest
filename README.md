@@ -10,4 +10,4 @@
 4. 파이썬에는 삼항연산자가 없다. 헐.. (True) if (Condition) else (False) 써야 함
 5. 파이썬 리스트 선언: list=[0 for i in range(n)], 이중리스트: list=[[0 for j in range(cols)] for i in range(rows)]
 6.''.join(list) : list속 string을 한 문자열로 연결할때 (반대:split())
-7.
+  
