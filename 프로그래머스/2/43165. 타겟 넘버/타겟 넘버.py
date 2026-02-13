@@ -16,4 +16,3 @@ def dfs(cnt, total, numbers, target):
     for sign in signs:
         dfs(cnt + 1, total + numbers[cnt] * sign, numbers, target)
     return
-        
