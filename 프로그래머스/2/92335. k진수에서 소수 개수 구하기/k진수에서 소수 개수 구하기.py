@@ -23,6 +23,15 @@ def solution(n, k):
     digit = 1
     str_num = str(num)
 
+    candidate = str_num.split('0')
+    print(candidate)
+    for num in candidate:
+        if not num:
+            continue
+        if is_prime(int(num)):
+            ans += 1
+
+    """"
     for i in range(len(str_num) - 1, -1, -1):
         if str_num[i] == '0':
             if is_prime(curr):
@@ -35,6 +44,7 @@ def solution(n, k):
         
     if is_prime(curr):
         ans += 1
+    """
     
     return ans
         
