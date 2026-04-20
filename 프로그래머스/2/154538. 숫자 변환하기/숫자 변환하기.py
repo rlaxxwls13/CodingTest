@@ -31,12 +31,9 @@ def solution(x, y, n):
         if dp[i] == INF:
             continue
         else:
-            if i+n <= y:
-                dp[i+n] = min(dp[i+n], dp[i] + 1)
-            if i*2 <= y:
-                dp[i*2] = min(dp[i*2], dp[i] + 1)
-            if i*3 <= y:
-                dp[i*3] = min(dp[i*3], dp[i] + 1)
+            for nxt in (i+n, i*2, i*3):
+                if nxt <= y:
+                    dp[nxt] = min(dp[nxt], dp[i] + 1)
                 
     answer = -1 if dp[y] == INF else dp[y]
     return answer
