@@ -15,7 +15,7 @@ def solution(numbers):
     result = 0
     numbers_list = [char for char in numbers]
     all_numbers_list = []
-    for i in range(1, len(numbers)+1):
+    for i in range(1, len(numbers) + 1):
         permu_list = map(lambda x : int(''.join(x)), permutations(numbers_list, i))
         all_numbers_list.extend(permu_list)
     for num in set(all_numbers_list):
